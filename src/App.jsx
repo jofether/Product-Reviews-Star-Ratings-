@@ -1,77 +1,112 @@
 import React from 'react';
-
-function Star({ filled }) {
-  return (
-    <svg 
-      className={`w-5 h-5 ${filled ? 'text-yellow-400' : 'text-gray-300'}`} 
-      fill="currentColor" 
-      viewBox="0 0 20 20"
-    >
-      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-    </svg>
-  );
-}
-
-function ReviewCard({ name, rating, text, date }) {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold">
-            {name.charAt(0)}
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-900 text-sm">{name}</h3>
-            <p className="text-xs text-gray-500">{date}</p>
-          </div>
-        </div>
-        
-        {/* STAR CONTAINER */}
-        {/* FUTURE BUG: Remove 'flex' here. Stars will stack vertically. */}
-        <div className="flex space-x-1">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <Star key={i} filled={i <= rating} />
-          ))}
-        </div>
-      </div>
-      <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
-    </div>
-  );
-}
+import { Header } from './components/Header';
+import { ProductHero } from './components/ProductHero';
+import { RatingBreakdown } from './components/RatingBreakdown';
+import { ReviewsList } from './components/ReviewsList';
+import { Footer } from './components/Footer';
+import { StatsSection } from './components/StatsSection';
+import { TopBenefitsSection } from './components/TopBenefitsSection';
+import { FeaturedReviewsSection } from './components/FeaturedReviewsSection';
 
 function App() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 font-sans">
-      <div className="max-w-3xl mx-auto">
-        <div className="flex items-end justify-between mb-8">
-          <div>
-             <h2 className="text-3xl font-bold text-gray-900">Customer Reviews</h2>
-             <p className="text-gray-500 mt-1">Based on 1,240 reviews</p>
-          </div>
-          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-700">Write a Review</button>
-        </div>
+  const reviews = [
+    {
+      name: "Emily Selman",
+      rating: 5,
+      date: "February 14, 2026",
+      text: "Absolutely stunning quality! The fabric feels premium, the color is vibrant, and the fit is perfect. I've purchased this item twice now. Shipping was fast and packaging was excellent. This is exactly what I was looking for!",
+      verified: true,
+      helpful: 342,
+      avatar: 'bg-rose-500'
+    },
+    {
+      name: "Hector Gibbons",
+      rating: 4,
+      date: "February 10, 2026",
+      text: "Really good quality overall. The material is soft and durable, seems like it will last a long time. My only minor complaint is that shipping took about 2 weeks, but customer service was very responsive. Great value for money!",
+      verified: true,
+      helpful: 198,
+      avatar: 'bg-blue-500'
+    },
+    {
+      name: "Mark Edwards",
+      rating: 2,
+      date: "February 5, 2026",
+      text: "The product itself is nice, but the sizing is way off from the description. I ordered a medium and it fits like extra small. The return process was easy though. I'd recommend checking the fit guide carefully before ordering.",
+      verified: true,
+      helpful: 156,
+      avatar: 'bg-cyan-500'
+    },
+    {
+      name: "Sophia Chen",
+      rating: 5,
+      date: "January 28, 2026",
+      text: "This exceeded my expectations! The attention to detail is incredible. The colors are beautiful, the seams are perfectly aligned, and it arrived ahead of schedule. Definitely worth the investment. I'll be ordering more!",
+      verified: true,
+      helpful: 287,
+      avatar: 'bg-amber-500'
+    },
+    {
+      name: "James Wilson",
+      rating: 4,
+      date: "January 20, 2026",
+      text: "Solid product. Quality is better than I expected at this price point. It's versatile and matches with almost everything in my wardrobe. Minor wrinkles from shipping but they came out with a quick press.",
+      verified: true,
+      helpful: 124,
+      avatar: 'bg-green-500'
+    },
+    {
+      name: "Rachel Morris",
+      rating: 5,
+      date: "January 15, 2026",
+      text: "I'm so happy with this purchase! The material is breathable and comfortable for all-day wear. The design is elegant and timeless. I've gotten so many compliments. Will definitely be a repeat customer!",
+      verified: true,
+      helpful: 401,
+      avatar: 'bg-purple-500'
+    },
+    {
+      name: "David Kumar",
+      rating: 3,
+      date: "January 8, 2026",
+      text: "It's okay. Nothing exceptional but not bad either. Does what it's supposed to do. The color was slightly different from the online photo - a bit more muted in person. Still decent quality.",
+      verified: false,
+      helpful: 89,
+      avatar: 'bg-pink-500'
+    },
+    {
+      name: "Lisa Anderson",
+      rating: 5,
+      date: "December 28, 2025",
+      text: "Perfect! This is my third purchase and I keep coming back for a reason. The quality is consistent, the design is timeless, and the customer service is fantastic. Highly recommend to anyone on the fence!",
+      verified: true,
+      helpful: 512,
+      avatar: 'bg-indigo-500'
+    },
+  ];
+  
+  const ratingCounts = {
+    5: 1240,
+    4: 340,
+    3: 89,
+    2: 45,
+    1: 28
+  };
+  
+  const totalReviews = Object.values(ratingCounts).reduce((a, b) => a + b, 0);
+  const averageRating = (
+    (5 * ratingCounts[5] + 4 * ratingCounts[4] + 3 * ratingCounts[3] + 2 * ratingCounts[2] + 1 * ratingCounts[1]) / totalReviews
+  ).toFixed(1);
 
-        <div className="space-y-4">
-          <ReviewCard 
-            name="Emily Selman" 
-            rating={5} 
-            date="July 16, 2026"
-            text="The texture of this fabric is amazing. It fits perfectly and the color is exactly as shown in the picture. Highly recommend!" 
-          />
-          <ReviewCard 
-            name="Hector Gibbons" 
-            rating={4} 
-            date="July 12, 2026"
-            text="Great quality for the price, but the shipping took a little longer than expected. Otherwise, a solid purchase." 
-          />
-          <ReviewCard 
-            name="Mark Edwards" 
-            rating={2} 
-            date="July 08, 2026"
-            text="I wanted to love this, but the sizing is completely off. I ordered a Medium and it feels like an Extra Small." 
-          />
-        </div>
-      </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Header />
+      <ProductHero averageRating={averageRating} totalReviews={totalReviews} />
+      <StatsSection />
+      <TopBenefitsSection />
+      <RatingBreakdown ratingCounts={ratingCounts} averageRating={averageRating} totalReviews={totalReviews} />
+      <FeaturedReviewsSection />
+      <ReviewsList reviews={reviews} />
+      <Footer />
     </div>
   );
 }
