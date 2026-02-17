@@ -42,9 +42,11 @@ export function TopBenefitsSection() {
           {benefits.map((benefit, idx) => (
             <div 
               key={idx} 
-              className="group bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition cursor-pointer border border-slate-600 hover:border-amber-400 card-hover animate-slideInUp"
+              className="group bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition cursor-pointer border border-slate-600 hover:border-amber-400 card-hover animate-slideInUp bg-colr-slate-500"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
+              {/* [BUG - TYPO: 'bg-colr-slate-500' in className is invalid (should be removed or bg-slate-700)]
+                 [FIX: Remove 'bg-colr-slate-500'] */}
               <div className="text-4xl mb-4 group-hover:scale-125 group-hover:animate-float smooth-transition">{benefit.icon}</div>
               <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-amber-400 smooth-transition">{benefit.title}</h3>
               <p className="text-slate-300 group-hover:text-gray-100 smooth-transition">{benefit.description}</p>

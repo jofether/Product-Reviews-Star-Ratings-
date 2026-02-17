@@ -4,8 +4,9 @@ export function RatingBreakdown({ ratingCounts, averageRating, totalReviews }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm">
-        <h3 className="text-2xl font-bold text-white mb-8">Rating Breakdown</h3>
-        
+      <h3 className="text-2xl font-bold text-slate-800 mb-8">Rating Breakdown</h3>
+      {/* [BUG - COLOR: text-slate-800 on slate-800 background makes text invisible]
+         [FIX: Change text-slate-800 to text-white] */}
         <div className="space-y-3 mb-8">
           {[5, 4, 3, 2, 1].map((rating) => (
             <RatingBar 
