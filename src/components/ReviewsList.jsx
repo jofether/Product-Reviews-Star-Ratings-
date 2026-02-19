@@ -7,8 +7,6 @@ export function ReviewsList({ reviews }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
-        {/* [BUG - LAYOUT: Missing 'flex' class, flex-col won't work properly]
-           [FIX: Change to 'flex flex-col md:flex-row'] */}
         <div>
           <h2 className="text-3xl font-bold text-white mb-2">Customer Reviews</h2>
           <p className="text-slate-400">Real feedback from verified purchases</p>

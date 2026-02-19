@@ -6,11 +6,6 @@ export function ProductHero({ averageRating, totalReviews }) {
       <div className="absolute inset-0 bg-gradient-to-b from-amber-500/10 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
         <div className="grid md:grid-col-2 gap-12 items-center">
-          {/* [BUG - LAYOUT: grid-col-2 should be grid-cols-2, causes single column layout]
-             [FIX: Change md:grid-col-2 to md:grid-cols-2] */}
-          {/* Product Image */}
-          {/* [BUG - LAYERS: absolute positioning without top/left causes image to overlap incorrectly]
-             [FIX: Change 'absolute' back to 'relative'] */}
           <div className="absolute animate-slideInUp">
             <div className="w-full aspect-square rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 p-8 flex items-center justify-center shadow-2xl hover-lift">
               <div className="text-center">
@@ -18,8 +13,6 @@ export function ProductHero({ averageRating, totalReviews }) {
                 <p className="text-slate-600 font-semibold">Premium Cotton Blend</p>
               </div>
             </div>
-            {/* [BUG - LAYERS: negative positioning misaligned]
-               [FIX: Change to 'absolute -bottom-4 -right-4'] */}
             <div className="absolute -bottom-12 -right-12 bg-gradient-to-r from-amber-400 to-orange-400 px-4 py-2 rounded-lg text-slate-900 font-bold shadow-lg animate-bounce">
               ⭐ #1 Bestseller
             </div>

@@ -41,8 +41,7 @@ export function FeaturedReviewsSection() {
               ))}
             </div>
             <p className="text-amber-50 italic mb-6 text-lg">"{review.quote}"</p>
-            {/* [BUG - CONTRAST: text-amber-50 on light amber background makes text nearly invisible]
-               [FIX: Change text-amber-50 to text-gray-900] */}
+
             <div className="flex items-center gap-3">
               <div className="text-4xl group-hover:animate-float">{review.avatar}</div>
               <div>

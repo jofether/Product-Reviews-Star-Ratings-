@@ -16,8 +16,6 @@ export function StatsSection() {
             className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-8 border border-slate-600 hover:border-amber-400 transition text-center card-hover animate-slideInUp hover-lift text-slate-5"
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
-            {/* [BUG - TYPO: 'text-slate-5' in className is invalid Tailwind (should be text-slate-500)]
-               [FIX: Change text-slate-5 to text-slate-500] */}
             <div className="text-5xl mb-4 group-hover:animate-float">🎁</div>
             <p className="text-3xl font-bold text-amber-400 mb-2">{stat.label}</p>
             <p className="text-slate-300">{stat.value}</p>

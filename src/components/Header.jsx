@@ -1,7 +1,5 @@
 export function Header() {
   return (
-    // [BUG - LAYERS: z-index set to -10 causes header to hide behind content]
-    // [FIX: Change z-40 back to z-40]
     <div className="bg-gradient-to-r from-slate-800 to-slate-900 border-b border-slate-700 sticky top-0 z-0 backdrop-blur-md bg-opacity-80">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3 group">
