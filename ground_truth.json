@@ -1,0 +1,155 @@
+{
+  "repository": "Product Reviews (Star Ratings)",
+  "bugs": [
+    {
+      "bug_category": "Color",
+      "bug_type": "text-color",
+      "file_modified": "src/components/FeaturedReviewsSection.jsx",
+      "line_number": 43,
+      "clean_code": "<p className=\"text-gray-700 italic mb-6 text-lg\">\"{review.quote}\"</p>",
+      "buggy_code": "<p className=\"text-amber-50 italic mb-6 text-lg\">\"{review.quote}\"</p>",
+      "css_selector": "p.text-gray-700",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Spacing",
+      "bug_type": "padding",
+      "file_modified": "src/components/Footer.jsx",
+      "line_number": 3,
+      "clean_code": "<div className=\"bg-slate-800 border-t border-slate-700 mt-20 py-12\">",
+      "buggy_code": "<div className=\"bg-slate-800 border-t border-slate-700 mt-20 py-0 px-0\">",
+      "css_selector": "div.py-12",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Layers",
+      "bug_type": "z-index",
+      "file_modified": "src/components/Header.jsx",
+      "line_number": 3,
+      "clean_code": "<div className=\"bg-gradient-to-r from-slate-800 to-slate-900 border-b border-slate-700 sticky top-0 z-40 backdrop-blur-md bg-opacity-80\">",
+      "buggy_code": "<div className=\"bg-gradient-to-r from-slate-800 to-slate-900 border-b border-slate-700 sticky top-0 z-0 backdrop-blur-md bg-opacity-80\">",
+      "css_selector": "div.z-40",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Typo",
+      "bug_type": "grid",
+      "file_modified": "src/components/ProductHero.jsx",
+      "line_number": 8,
+      "clean_code": "<div className=\"grid md:grid-cols-2 gap-12 items-center\">",
+      "buggy_code": "<div className=\"grid md:grid-col-2 gap-12 items-center\">",
+      "css_selector": "div.grid",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Layout",
+      "bug_type": "position",
+      "file_modified": "src/components/ProductHero.jsx",
+      "line_number": 10,
+      "clean_code": "<div className=\"relative animate-slideInUp\">",
+      "buggy_code": "<div className=\"absolute animate-slideInUp\">",
+      "css_selector": "div.relative",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Spacing",
+      "bug_type": "positioning",
+      "file_modified": "src/components/ProductHero.jsx",
+      "line_number": 16,
+      "clean_code": "<div className=\"absolute -bottom-4 -right-4 bg-gradient-to-r from-amber-400 to-orange-400 px-4 py-2 rounded-lg text-slate-900 font-bold shadow-lg animate-bounce\">",
+      "buggy_code": "<div className=\"absolute -bottom-12 -right-12 bg-gradient-to-r from-amber-400 to-orange-400 px-4 py-2 rounded-lg text-slate-900 font-bold shadow-lg animate-bounce\">",
+      "css_selector": "div.-bottom-4",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Color",
+      "bug_type": "text-color",
+      "file_modified": "src/components/RatingBreakdown.jsx",
+      "line_number": 7,
+      "clean_code": "<h3 className=\"text-2xl font-bold text-white mb-8\">Rating Breakdown</h3>",
+      "buggy_code": "<h3 className=\"text-2xl font-bold text-slate-800 mb-8\">Rating Breakdown</h3>",
+      "css_selector": "h3.text-white",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Layout",
+      "bug_type": "flexbox",
+      "file_modified": "src/components/ReviewsList.jsx",
+      "line_number": 9,
+      "clean_code": "<div className=\"flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8\">",
+      "buggy_code": "<div className=\"flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8\">",
+      "css_selector": "div.flex",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Typo",
+      "bug_type": "text-color",
+      "file_modified": "src/components/StatsSection.jsx",
+      "line_number": 17,
+      "clean_code": "className=\"bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-8 border border-slate-600 hover:border-amber-400 transition text-center card-hover animate-slideInUp hover-lift\"",
+      "buggy_code": "className=\"bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-8 border border-slate-600 hover:border-amber-400 transition text-center card-hover animate-slideInUp hover-lift text-slate-5\"",
+      "css_selector": "div.text-slate-5",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "bug_category": "Typo",
+      "bug_type": "background-color",
+      "file_modified": "src/components/TopBenefitsSection.jsx",
+      "line_number": 45,
+      "clean_code": "className=\"group bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition cursor-pointer border border-slate-600 hover:border-amber-400 card-hover animate-slideInUp\"",
+      "buggy_code": "className=\"group bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition cursor-pointer border border-slate-600 hover:border-amber-400 card-hover animate-slideInUp bg-colr-slate-500\"",
+      "css_selector": "div.bg-colr-slate-500",
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ]
+}
