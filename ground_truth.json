@@ -2,6 +2,7 @@
   "repository": "Product Reviews (Star Ratings)",
   "bugs": [
     {
+      "comment": "Bug #1 - text-color",
       "bug_category": "Color",
       "bug_type": "text-color",
       "file_modified": "src/components/FeaturedReviewsSection.jsx",
@@ -10,13 +11,14 @@
       "buggy_code": "<p className=\"text-amber-50 italic mb-6 text-lg\">\"{review.quote}\"</p>",
       "css_selector": "p.text-gray-700",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 48,
+        "y": 2279,
+        "width": 331,
+        "height": 84
       }
     },
     {
+      "comment": "Bug #2 - padding",
       "bug_category": "Spacing",
       "bug_type": "padding",
       "file_modified": "src/components/Footer.jsx",
@@ -26,12 +28,13 @@
       "css_selector": "div.py-12",
       "bounding_box": {
         "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "y": 5045,
+        "width": 1280,
+        "height": 61
       }
     },
     {
+      "comment": "Bug #3 - z-index",
       "bug_category": "Layers",
       "bug_type": "z-index",
       "file_modified": "src/components/Header.jsx",
@@ -42,11 +45,12 @@
       "bounding_box": {
         "x": 0,
         "y": 0,
-        "width": 0,
-        "height": 0
+        "width": 1280,
+        "height": 73
       }
     },
     {
+      "comment": "Bug #4 - grid",
       "bug_category": "Typo",
       "bug_type": "grid",
       "file_modified": "src/components/ProductHero.jsx",
@@ -55,13 +59,14 @@
       "buggy_code": "<div className=\"grid md:grid-col-2 gap-12 items-center\">",
       "css_selector": "div.grid",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 16,
+        "y": 137,
+        "width": 1248,
+        "height": 330
       }
     },
     {
+      "comment": "Bug #5 - position",
       "bug_category": "Layout",
       "bug_type": "position",
       "file_modified": "src/components/ProductHero.jsx",
@@ -70,13 +75,14 @@
       "buggy_code": "<div className=\"absolute animate-slideInUp\">",
       "css_selector": "div.relative",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 16,
+        "y": 187,
+        "width": 229,
+        "height": 229
       }
     },
     {
+      "comment": "Bug #6 - positioning",
       "bug_category": "Spacing",
       "bug_type": "positioning",
       "file_modified": "src/components/ProductHero.jsx",
@@ -85,13 +91,14 @@
       "buggy_code": "<div className=\"absolute -bottom-12 -right-12 bg-gradient-to-r from-amber-400 to-orange-400 px-4 py-2 rounded-lg text-slate-900 font-bold shadow-lg animate-bounce\">",
       "css_selector": "div.-bottom-4",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 140,
+        "y": 416,
+        "width": 153,
+        "height": 40
       }
     },
     {
+      "comment": "Bug #7 - text-color",
       "bug_category": "Color",
       "bug_type": "text-color",
       "file_modified": "src/components/RatingBreakdown.jsx",
@@ -100,13 +107,14 @@
       "buggy_code": "<h3 className=\"text-2xl font-bold text-slate-800 mb-8\">Rating Breakdown</h3>",
       "css_selector": "h3.text-white",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 49,
+        "y": 1646,
+        "width": 1182,
+        "height": 32
       }
     },
     {
+      "comment": "Bug #8 - flexbox",
       "bug_category": "Layout",
       "bug_type": "flexbox",
       "file_modified": "src/components/ReviewsList.jsx",
@@ -115,13 +123,14 @@
       "buggy_code": "<div className=\"flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8\">",
       "css_selector": "div.flex",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 16,
+        "y": 2575,
+        "width": 1248,
+        "height": 110
       }
     },
     {
+      "comment": "Bug #9 - text-color",
       "bug_category": "Typo",
       "bug_type": "text-color",
       "file_modified": "src/components/StatsSection.jsx",
@@ -130,13 +139,14 @@
       "buggy_code": "className=\"bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-8 border border-slate-600 hover:border-amber-400 transition text-center card-hover animate-slideInUp hover-lift text-slate-5\"",
       "css_selector": "div.text-slate-5",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 16,
+        "y": 678,
+        "width": 288,
+        "height": 198
       }
     },
     {
+      "comment": "Bug #10 - background-color",
       "bug_category": "Typo",
       "bug_type": "background-color",
       "file_modified": "src/components/TopBenefitsSection.jsx",
@@ -145,10 +155,10 @@
       "buggy_code": "className=\"group bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition cursor-pointer border border-slate-600 hover:border-amber-400 card-hover animate-slideInUp bg-colr-slate-500\"",
       "css_selector": "div.bg-colr-slate-500",
       "bounding_box": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 16,
+        "y": 1089,
+        "width": 395,
+        "height": 190
       }
     }
   ]
